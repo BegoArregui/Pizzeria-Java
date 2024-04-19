@@ -1,0 +1,98 @@
+<!--Una pizzeria en la que hay 3 tamaños de pizza (pequeña, mediana y familiar) y 4 tipos (4 quesos, bacon queso, hawaiana y 
+    delicias del mar). Los precios cambian con cada tipo y tamaño. Hay también regalos, a apartir de 30 euros un refresco y 
+    a partir de 50 refresco y postre-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Pizzeria Mamma Mia</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Pizzería Mamma Mia</h1>
+        </div>
+        <div>
+            <h2>Bienvenidos la mejor pizzería de tu barrio y del mío</h2>
+        </div>
+    </header>
+    <div class="contenido">
+        <div class="izquierda">
+            <div class="selector">
+                <div>
+                    Tamaño: <select id="tam">
+                        <option value="peque">Pequeña</option>
+                        <option value="mediana">Mediana</option>
+                        <option value="familiar">Familiar</option>
+                    </select>
+                </div>
+
+                <div>
+                    Tipos: <select id="tipo">
+                        <option value="c_quesos">Cuatro quesos</option>
+                        <option value="bacon_queso">Bacon y queso</option>
+                        <option value="hawaiana">Hawaiana</option>
+                        <option value="delicias_mar">Delicias del mar</option>
+                        <option value="personalizada">Personalizar...</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                    Complementos (sólo para la pizza personalizada):
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pollo">Pollo<br>
+                        <input type="checkbox" id="jamon">Jamón<br>
+                        <input type="checkbox" id="chorizo">Chorizo<br>
+                        <input type="checkbox" id="morcilla">Morcilla<br>
+                    </div>
+                </div>
+                <div>
+                    Nº de pizzas: <input type="number" id="num" min="1" max="5">
+                </div>
+                <div>
+                    Entrega: <select id="entrega">
+                        <option value="domicilio">A domicilio</option>
+                        <option value="recogida">Recogida en tienda</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                       Hora de entrega:
+                    </div>
+                    <div>
+                        <input type="time" name="hora" min="14:00" max="22:30">
+                    </div>
+                </div>
+            </div>
+
+            <div class="boton_ok">
+                <input type="button" onclick="pizzeria();" value="Calcular">
+            </div>
+        </div>
+        <div class="derecha">
+            <div class="resultados">
+                <div class="total">
+                    Total: 
+                </div>
+                <div>    
+                    <input type="text" id="txttotal">
+                </div>
+                <div class="regalo">
+                    Regalo: 
+                </div>    
+                <div>
+                    <input type="text" id="txtdescuento" size="55">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
